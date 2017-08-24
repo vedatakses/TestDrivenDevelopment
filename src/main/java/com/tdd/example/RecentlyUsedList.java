@@ -25,6 +25,10 @@ public class RecentlyUsedList<T> {
         return list.get(index);
     }
 
+    public boolean contains(T element) {
+        return list.contains(element);
+    }
+
     public void add(T element) {
         if (element == null) {
             throw new IllegalArgumentException("NULL element can not be added");
@@ -36,10 +40,6 @@ public class RecentlyUsedList<T> {
 
     public void remove(T element) {
         list.remove(element);
-    }
-
-    public boolean contains(T element) {
-        return list.contains(element);
     }
 
     private void addToHead(T element) {

@@ -21,9 +21,9 @@ public class RecentlyUsedListTest {
     public void list_elements_added_to_head() {
         // GIVEN:
         RecentlyUsedList<String> list = new RecentlyUsedList<>();
+        list.add("Book");
 
         // WHEN:
-        list.add("Book");
         list.add("Pencil");
 
         // THEN:
@@ -51,10 +51,10 @@ public class RecentlyUsedListTest {
     public void list_not_accepts_duplicate_element_additions() {
         // GIVEN:
         RecentlyUsedList<String> list = new RecentlyUsedList<>();
-
-        // WHEN:
         list.add("Book");
         list.add("Pencil");
+
+        // WHEN:
         list.add("Book");
 
         // THEN:
